@@ -1,10 +1,11 @@
 <h1>Villanos <small>Marvel  y DC </small></h1>
-
+<hr>
 <div class="card-columns">
     <div class="card animated fadeIn fast" *ngFor="let villanos of villano;">
         <img src="{{villanos.img}}" class="card-img-top" alt="villanos.nombre">
         <div class="card-body">
             <h5 class="card-title">{{villanos.nombre}}</h5>
+            <h5 class="card-title">Universo {{villanos.casa}}</h5>
             <p class="card-text">{{villanos.bio}}</p>
             <p class="card-text"><small class="text-muted">{{villanos.aparicion}}</small></p>
             <button type="button"  class="btn btn-outline-primary btn-block">Ver mas...</button>

@@ -1,4 +1,5 @@
 <h1>Burcar por: <small>{{busqueda}}</small></h1>
+<h1>Heroes <small>Marvel  y DC </small></h1>
 <hr>
 <div class="row animated fadeIn fast" *ngIf="hero.length == 0">
     <div class="col-md-12">
@@ -7,11 +8,19 @@
         </div>
     </div>
 </div>
-<h1>Heroes <small>Marvel  y DC </small></h1>
+
 <div class="card-columns">
     <app-hero-card [heros]="heros" [index]="idx" *ngFor="let heros of hero; let idx = index;"></app-hero-card>
 </div>
 <h1>Villanos <small>Marvel  y DC </small></h1>
+<hr>
+<div class="row animated fadeIn fast" *ngIf="villano.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-primary">
+            No existe resultados para su busqueda {{busqueda}}
+        </div>
+    </div>
+</div>
 <div class="card-columns">
     <div class="card animated fadeIn fast" *ngFor="let villanos of villano;">
         <img src="{{villanos.img}}" class="card-img-top" alt="villanos.nombre">
