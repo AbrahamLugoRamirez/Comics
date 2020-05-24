@@ -3,22 +3,21 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class VillanosService {
 
-    private villano:any[]=
-    //private villano:Villano[]=
+    private villano:any[]= 
         [
             {
-              nombre: "Aquaman",
-              bio: "El poder más reconocido de Aquaman es la capacidad telepática para comunicarse con la vida marina, la cual puede convocar a grandes distancias.",
+              nombre: "Thanos",
+              bio: "Thanos es un Titán que nació en el planeta con el mismo nombre. Originalmente fue creado por Jim Starlin y Mike Friedrich como uno de los enemigos de Iron-Man en 1973.",
               img: "assets/img/aquaman.png",
-              aparicion: "1941-11-01",
-              casa:"DC"
+              aparicion: "1973-02-01",
+              casa:"Marvel"
             },
             {
-              nombre: "Batman",
-              bio: "Los rasgos principales de Batman se resumen en «destreza física, habilidades deductivas y obsesión». La mayor parte de las características básicas de los cómics han variado por las diferentes interpretaciones que le han dado al personaje.",
+              nombre: "Ultron",
+              bio: "es un ficticio supervillano que aparece en los cómics americanos publicados por Marvel . Es más reconocido como un enemigo del grupo de superhéroes de los Vengadores y su relación cuasifamiliar con su creador Hank Pym .",
               img: "assets/img/batman.png",
-              aparicion: "1939-05-01",
-              casa:"DC"
+              aparicion: "1968-06-01",
+              casa:"Marvel"
             },
             {
               nombre: "Daredevil",
@@ -66,7 +65,6 @@ export class VillanosService {
 
 
        getVillanos(){
-       // getHeros():Hero[]{
             return this.villano;
         }
 
