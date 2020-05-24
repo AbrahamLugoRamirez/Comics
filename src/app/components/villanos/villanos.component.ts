@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { VillanosService } from '../../service/villanos.service';
 
 @Component({
   selector: 'app-villanos',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VillanosComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _villanoService: VillanosService) { }
 
   ngOnInit(): void {
   }

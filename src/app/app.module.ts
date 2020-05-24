@@ -17,6 +17,7 @@ import { APP_ROUTING } from './app.routes';
 // SERVICIOS
 
 import { HeroService } from './service/hero.service';
+import { VillanosService } from './service/villanos.service';
 import { HeroCardComponent } from './components/hero-card/hero-card.component';
 import { VillanosComponent } from './components/villanos/villanos.component';
 
@@ -39,7 +40,8 @@ import { VillanosComponent } from './components/villanos/villanos.component';
     APP_ROUTING
   ],
   providers: [
-    HeroService
+    HeroService,
+    VillanosService
   ],
   bootstrap: [AppComponent]
 })
