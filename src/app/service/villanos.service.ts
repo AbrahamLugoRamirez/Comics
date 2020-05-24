@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class VillanosService {
 
-    private villano:any[]= 
+   // private villano:any[]= 
+    private villano:Villano[]=
         [
             {
               nombre: "Thanos",
@@ -69,4 +70,29 @@ export class VillanosService {
         }
 
 
+        getHero(id:number){
+          return this.villano[id];   
+      }
+  
+      buscarVillano(palabra:string):Villano[]{
+        let villanoArr:Villano[] = [];
+        palabra = palabra.toLowerCase();
+        for( let villano of this.villano){
+          let nombre = villano.nombre.toLowerCase();
+          if(nombre.indexOf(palabra)>=0){
+             villanoArr.push(villano);
+          }
+        }
+        return villanoArr;
+      }
+
+
+}
+
+export interface Villano{
+  nombre:string,
+  bio:string,
+  img:string,
+  aparicion:string,
+  casa:string
 }
