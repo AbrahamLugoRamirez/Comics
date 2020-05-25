@@ -70,7 +70,7 @@ export class VillanosService {
         }
 
 
-        getHero(id:number){
+        getVillano(id:number){
           return this.villano[id];   
       }
   
@@ -96,3 +96,4 @@ export interface Villano{
   aparicion:string,
   casa:string
 }
+

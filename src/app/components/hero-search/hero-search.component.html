@@ -10,7 +10,7 @@
 </div>
 
 <div class="card-columns">
-    <app-hero-card [heros]="heros" [index]="idx" *ngFor="let heros of hero; let idx = index;"></app-hero-card>
+    <app-hero-card [heros]="heros" [routerLink]="[ '/detalles', idx]" [index]="idx" *ngFor="let heros of hero; let idx = index;"></app-hero-card>
 </div>
 <h1>Villanos <small>Marvel  y DC </small></h1>
 <hr>
@@ -22,19 +22,15 @@
     </div>
 </div>
 <div class="card-columns">
-    <div class="card animated fadeIn fast" *ngFor="let villanos of villano;">
+    <div class="card animated fadeIn fast" *ngFor="let villanos of villano; let idx = index">
         <img src="{{villanos.img}}" class="card-img-top" alt="villanos.nombre">
         <div class="card-body">
             <h5 class="card-title">{{villanos.nombre}}</h5>
             <p class="card-text">{{villanos.bio}}</p>
             <p class="card-text"><small class="text-muted">{{villanos.aparicion}}</small></p>
-            <button type="button"  class="btn btn-outline-primary btn-block">Ver mas...</button>
+            <button type="button" [routerLink]="[ '/detalles', idx+10000 ]" class="btn btn-outline-primary btn-block">Ver mas...</button>
         </div>    
     </div>
-    
-
-
-
 
 
 </div>
